@@ -4,7 +4,7 @@ from prettytable import PrettyTable
 
 password=getpass.getpass("Please Enter the password:")
 options = {'server': 'https://workflow.advisory.com'}
-jira = JIRA(options, basic_auth=('muthun', password)) 
+jira = JIRA(options, basic_auth=('username', password)) 
 abc =jira.search_issues('project = ETCCB AND "Business Unit Impacted" = "ABC Admin" AND "Change Category" = "Network/Infrastructure"  AND status = Unreviewed')
 
 
